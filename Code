@@ -643,4 +643,257 @@ public class jcf{
 		System.out.println(students);
 	}
 }
+// Important Keywords for Queue (Q8)
+//    Queue → FIFO (First In, First Out)
+//    add(element) → Insert element into queue
+//    poll() → Remove and return the first element (head) of queue
+//    peek() → See the first element without removing it
+//    isEmpty() → Check if queue is empty
+//    LinkedList → Common class used to implement Queue in Java
 
+//Q1.
+
+//Write a program to create a queue of integers. Add 10, 20, 30 and then display the queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue <Integer> a = new LinkedList<>();
+		a.add(10);
+		a.add(20);
+		a.add(30);
+		System.out.println(a);
+	}
+}
+
+//Q2.
+
+//Write a program to create a queue of strings. Add Apple, Banana, Mango. Then remove the first element using poll() and print the queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue<String> q = new LinkedList<>();
+		q.add("Apple");
+		q.add("Banana");
+		q.add("Mango");
+		
+		q.remove();
+		System.out.println(q);
+	}
+}
+
+//Q3.
+
+//Write a program where you add 100, 200, 300, 400 to a queue. Remove two elements using poll() and display the remaining queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue<Integer> a = new LinkedList<>();
+		a.add(100);
+		a.add(200);
+		a.add(300);
+		a.add(400);
+		a.remove();
+		a.remove();
+		System.out.println(a);
+	}
+}
+
+//Q4.
+//Write a program where you add 3 student names in a queue. Then display the first element using peek() without removing it.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue<String> a = new LinkedList<>();
+		a.add("Riti");
+		a.add("Balo");
+		a.add("Sudipto");
+		System.out.println("First Element : "+a.peek());
+		System.out.println("Final : "+a);
+	}
+}
+
+//Q5.
+//Write a program where you add 5 numbers to a queue. Then keep removing elements one by one using poll() until the queue becomes empty.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue<Integer> a = new LinkedList<>();
+		a.add(1);
+		a.add(2);
+		a.add(3);
+		a.add(4);
+		a.add(5);
+		while(!a.isEmpty()){
+			System.out.println("After Removal :"+a.poll());
+		}
+	}
+}
+
+//Important Keywords for PriorityQueue (Q9)
+//PriorityQueue → A special queue where elements are ordered by priority (default: smallest first).
+//add(element) → Insert element.
+//poll() → Remove and return the smallest element.
+//peek() → Return the smallest element without removing it.
+//isEmpty() → Check if queue is empty.
+//Default order → Natural ascending order (min-first).
+//Q1.
+
+//Create a PriorityQueue of integers. Add 30, 10, 20 and display the queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		PriorityQueue<Integer> a = new PriorityQueue<>();
+		a.add(30);
+		a.add(10);
+		a.add(20);
+		TreeSet<Integer> ab = new TreeSet<>(a);
+		System.out.println(a);
+		System.out.println(ab);
+	}
+}
+
+//Q2.
+
+//Create a PriorityQueue of integers. Add 50, 40, 70, 10. Then remove the smallest element using poll() and print the queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		PriorityQueue<Integer> a = new PriorityQueue<>();
+		a.add(50);
+		a.add(40);
+		a.add(70);
+		a.add(10);
+		a.remove();
+		System.out.println(a);
+	}
+}
+
+//Q3.
+
+//Create a PriorityQueue of strings. Add Orange, Apple, Banana. Display which element comes first using peek().
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+        PriorityQueue<String> a=new PriorityQueue<>();
+		a.add("Orange");
+		a.add("Apple");
+		a.add("Banana");
+		System.out.println("First peek fruits : "+a.peek());
+    }
+}
+
+//Q4.
+//Add 5, 2, 8, 1 into a PriorityQueue. Remove two elements using poll() and display the remaining queue.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		PriorityQueue<Integer> a = new PriorityQueue<>();
+		a.add(5);
+		a.add(2);
+		a.add(8);
+		a.add(1);
+		
+		a.remove();
+		a.remove();
+		System.out.println("Remaining elements : "+a);
+	}
+}
+
+//Q5.
+
+//Add 15, 5, 25, 10 into a PriorityQueue. Keep removing elements using poll() until the queue becomes empty, printing each removed element.
+
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		PriorityQueue<Integer> a = new PriorityQueue<>();
+		a.add(15);
+		a.add(5);
+		a.add(25);
+		a.add(10);
+		while(!a.isEmpty()){
+			System.out.println("Remaining Element : "+a.poll());
+		}
+	}
+}
+
+//Important Keywords for Stack (Q10)
+//Stack → LIFO (Last In, First Out)
+//push(element) → Add element to the top of the stack
+//pop() → Remove and return the top element
+//peek() → Look at the top element without removing it
+//isEmpty() → Check if the stack is empty
+//Q1.
+//Create a stack of integers. Push 10, 20, 30 and display the stack.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Stack<Integer> a = new Stack<>();
+		a.add(10);
+		a.add(20);
+		a.add(30);
+		System.out.println(a);
+	}
+}
+
+//Q2.
+//Create a stack of strings. Push Apple, Banana, Mango. Then pop one element and display the stack.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Stack<String> a= new Stack<>();
+		a.push("Apple");
+		a.push("Banana");
+		a.push("Mango");
+	    a.pop();
+		System.out.println("Display: "+a);
+	}
+}
+
+//Q3.
+//Push 100, 200, 300, 400 into a stack. Pop two elements and display the remaining stack
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Stack<Integer> a = new Stack<>();
+		a.push(100);
+		a.push(200);
+		a.push(300);
+		a.push(400);
+		a.pop();
+		a.pop();
+		System.out.println(a);
+	}
+}
+
+//Q4.
+
+//Create a stack of student names. Push Rahim, Karim, Sumi. Then use peek() to display the top element without removing it.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Stack<String> a = new Stack<>();
+		a.push("Rahim");
+		a.push("Karim");
+		a.push("Sumi");
+		System.out.println("First Element : "+a.peek());
+	}	
+}
+*/
+//Q5.
+
+//Push 1, 2, 3, 4, 5 into a stack. Then keep popping elements until the stack is empty, printing each removed element.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Stack<Integer> a = new Stack<>();
+		a.push(1);
+		a.push(2);
+		a.push(3);
+		a.push(4);
+		a.push(5);
+		while(!a.isEmpty()){
+			System.out.println("After removing : "+a.pop());
+		}
+	}
+}
