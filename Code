@@ -1,0 +1,646 @@
+// 3. List Interface
+//    1. ArrayList
+//        Backed by a dynammic property
+//        Fast Random Access
+/*
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		List<String> names = new ArrayList<>();
+		names.add("Riti");
+		names.add("Sudipto");
+		names.add("Pushpita");
+		names.add("Mondol");
+		System.out.println("Lists : "+names);
+		
+		names.remove("Mondol");
+		System.out.println("After Removal : "+names);
+	}
+}
+
+// 4.Set Interface
+//    1. Hash Set 
+//         Stores Unique Elements. 
+//         No order guarantee.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Set<String> cities = new HashSet<>();
+		cities.add("Dhaka");
+		cities.add("Khulna");
+		cities.add("Dhaka");
+		System.out.println(cities);
+	}
+}
+
+// 5.Map Interface
+//    1. HashMap
+//       Fast lookups , no order 
+ import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Map<String , Integer> marks = new HashMap<>();
+		marks.put("Alice ",85);
+		marks.put("Bob",90);
+		System.out.println("Alice's marks : "+marks.get("Alice"));
+	}
+}	
+
+// 6. Queue and Deque
+// Queue(FIFO) : LinkedList
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		Queue<String> queue = new LinkedList<>();
+		queue.offer("Customer1 ");
+		queue.offer("Customer2 ");
+		queue.offer("Customer3 ");
+		System.out.println(queue.poll());
+	}
+}
+//(62-400)
+
+// Question
+// 1 .Create an ArrayList of Strings and add 5 fruit names to it. Then display all fruits.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<String> fruits = new ArrayList<>();
+		fruits.add("Bannana");
+		fruits.add("Ghuava");
+		fruits.add("Pine Apple");
+		fruits.add("JackFruit");
+		fruits.add("Mango");
+		System.out.println(fruits);
+	}
+}
+
+// 2.Create an ArrayList of Integers. Add numbers 10, 20, 30, 40, 50. Remove the number 30 and display the updated list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<Integer> numbers = new ArrayList<>();
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(30);
+		numbers.add(40);
+		numbers.add(50);
+		numbers.remove(Integer.valueOf(30));
+		System.out.println("Updated numbers : "+numbers);
+	}
+}
+
+// 3. Insert a new element "Mango" at index 2 in an ArrayList that already has ["Apple", "Banana", "Orange"]. Display the final list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<String> fruits = new ArrayList<>();
+		fruits.add("Apple");
+		fruits.add("Banana");
+		fruits.add("Orange");
+		fruits.add(2,"Mango");
+		System.out.println("Final fruits : "+fruits);
+	}
+}
+
+// 4. Write a program that creates an ArrayList of student names. Add 4 names, then remove the first name from the list, and display all remaining names.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<String> names = new ArrayList<>();
+		names.add("Pushpita");
+		names.add("Mondol");
+		names.add("Riti");
+		names.add("Sudipto");
+		names.remove(0);
+		//names.remove(String.namesOf("Pushpita"));
+		System.out.println("Remaining Names : "+names);
+	}
+}
+
+// 5.Write a program where you create an ArrayList of integers [5, 10, 15, 20, 25].
+
+//     Add the number 100 at the end.
+
+//     Remove the element at index 2.
+
+//      Display the final list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<Integer> number = new ArrayList<>();
+		number.add(5);
+		number.add(10);
+		number.add(15);
+		number.add(20);
+		number.add(25);
+		
+		number.add(100);
+		
+		number.remove(2);
+		System.out.println("Final List : "+number);
+	}
+}
+
+// Practice LinkedList (Q2) -> addFirst/ addLast / remove
+// Question -1 : a LinkedList of Strings for names. Add "Rahim", "Karim", and "Sumi".
+//   Use addFirst("Tania")
+//   Use addLast("Rafi")
+//   Display the final list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<String> names = new LinkedList<>();
+		names.add("Rahim");
+		names.add("Karim");
+		names.add("Sumi");
+		
+		names.addFirst("Tania");
+		names.addLast("Rafi");
+		System.out.println("Final List : "+names);
+	}
+}
+
+// Question - 2 :Create a LinkedList of integers. Add numbers 10, 20, 30, 40.
+//      Remove the first element using removeFirst().
+//      Remove the last element using removeLast().
+//      Display the updated list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<Integer> numbers = new LinkedList<>();
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(30);
+		numbers.add(40);
+		
+		numbers.removeFirst();
+		numbers.removeLast();
+		System.out.println("Updated List : "+numbers);
+	}
+}
+
+// Question -3: Create a LinkedList of fruits. Add "Apple", "Banana", "Mango", "Orange".
+//      Remove "Banana" using remove("Banana").
+//      Then add "Pineapple" at the end using addLast().
+//       Display the final list. 
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<String> fruits = new LinkedList<>();
+		fruits.add("Apple");
+		fruits.add("Banana");
+		fruits.add("Mango");
+		fruits.add("Orange");
+		
+		fruits.remove("Banana");
+		fruits.addLast("Pineapple");
+		System.out.println("Final List : "+fruits);
+	}
+}
+
+// Question - 04 Create a LinkedList of integers [5, 15, 25, 35].
+//   Add 0 at the beginning.
+//   Add 50 at the end.
+//   Remove element at index 2.
+//   Display the updated list.
+
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<Integer> number = new LinkedList<>();
+		number.add(5);
+		number.add(15);
+		number.add(25);
+		number.add(35);
+		
+		number.addFirst(0);
+		number.addLast(50);
+		number.remove(2);
+		
+		System.out.println("Updated List : "+number);
+	}
+}
+
+// Question - 5 : Write a program using LinkedList of city names. Add "Dhaka", "Chittagong", "Khulna".
+//Add "Barisal" at first.
+//Add "Sylhet" at last.
+//Remove the city "Khulna".
+//Display the final list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<String> cities = new LinkedList<>();
+		cities.add("Dhaka");
+		cities.add("Chittagong");
+		cities.add("Khulna");
+		
+		cities.addFirst("Barisal");
+		cities.addLast("Sylhet");
+		
+		cities.remove("Khulna");
+		System.out.println("Final List : "+cities);
+	}
+}
+
+// Sorting(Q3) 
+// Important exam points:
+//    Does not allow duplicates
+//    No guarantee of order (not sorted like TreeSet)
+//    Used to remove duplicates automatically
+
+Supports add(), remove(), contains(), size()
+//Question- 1.Create an ArrayList of integers [40, 10, 30, 20, 50].
+//   Sort the list in ascending order using Collections.sort().
+//   Display the sorted list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		LinkedList<Integer> number = new LinkedList<>();
+		number.add(40);
+		number.add(10);
+		number.add(30);
+		number.add(20);
+		number.add(50);
+		
+		Collections.sort(number);
+		System.out.println("Sorted List"+number);
+	}
+}
+
+//Question- 2 Create an ArrayList of strings with ["Banana", "Apple", "Mango", "Orange"].
+//   Sort the list alphabetically.
+//   Display the sorted list.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<String> fruits=new ArrayList<>();
+		fruits.add("Banana");
+		fruits.add("Apple");
+		fruits.add("Mango");
+		fruits.add("Orange");
+		
+		Collections.sort(fruits);
+		System.out.println("Sorted List:"+fruits);
+	}
+}
+
+//Question- 3 Create an ArrayList of integers [5, 15, 25, 10, 20].
+//Sort the list in descending order.
+//Display the final list
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<Integer> numbers = new ArrayList<>();
+		numbers.add(5);
+		numbers.add(15);
+		numbers.add(25);
+		numbers.add(10);
+		numbers.add(20);
+		
+		Collections.sort(numbers,Collections.reverseOrder());
+		System.out.println("Descending Order: "+numbers);
+	}
+}
+
+//Question- 4 Create an ArrayList of integers [10, 20, 10, 30, 20, 40].
+
+// Sort the list.
+
+// Display the sorted list and show how duplicates are arranged.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList <Integer> numbers = new ArrayList<>();
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(10);
+		numbers.add(30);
+		numbers.add(20);
+		numbers.add(40);
+		Collections.sort(numbers);
+		System.out.println("Sorted List : "+numbers);
+	}
+}
+//Question- 5 Create an ArrayList of student names ["Tania", "Rahim", "Karim", "Sumi", "Rafi"].
+//   Sort them in alphabetical order.
+//   Then sort them again in reverse alphabetical order.
+//   Display both results.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<String> names = new ArrayList<>();
+		names.add("Tania");
+		names.add("Rahim");
+		names.add("Karim");
+		names.add("Sumi");
+		
+		Collections.sort(names);
+		System.out.println("Alphabetical Order : "+names);
+		
+		Collections.sort(names,Collections.reverseOrder());
+		System.out.println("Reverse Order : "+names);
+	}
+}
+
+// HashSet(Q4)- removes duplicates
+// Question -1 Create a HashSet of integers. Add 10, 20, 30, 20, 40, 10.
+//     Display the HashSet and explain how duplicates are removed.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashSet<Integer> numbers = new HashSet<>();
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(30);
+		numbers.add(20);
+		numbers.add(40);
+		numbers.add(10);
+		System.out.println("Contains 30 ? :"+numbers.contains(30));
+		System.out.println("HashSet : "+numbers);
+	}
+}
+
+// Question-2 Create a HashSet of strings with names: "Rahim", "Karim", "Sumi", "Rahim", "Tania".
+// Display the HashSet and show that "Rahim" appears only once.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashSet<String> names = new HashSet<>();
+		names.add("Rahim");
+		names.add("Karim");
+		names.add("Sumi");
+		names.add("Rahim");
+		names.add("Tania");
+		System.out.println(names);
+	}
+}
+
+// Question-3Create a HashSet of integers [5, 10, 15, 20].
+//   Check if 15 is present using contains().
+//   Remove 10 using remove().
+//   Display the updated HashSet.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashSet<Integer> numbers = new HashSet<>();
+		numbers.add(5);
+		numbers.add(10);
+		numbers.add(15);
+		numbers.add(20);
+		System.out.println("Conrains 15 ? : "+numbers.contains(15));
+		numbers.remove(10);
+		System.out.println("Updated HashSet : "+numbers);
+	}
+}
+
+// Question-4 Create a HashSet of fruits. Add "Apple", "Banana", "Mango", "Orange".
+//    Try adding "Banana" again.
+//    Display the HashSet to show it still contains only one "Banana".
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashSet<String> fruits = new HashSet<>();
+		fruits.add("Apple");
+		fruits.add("Banana");
+		fruits.add("Mango");
+		fruits.add("Orange");
+		
+		fruits.add("Banana");
+		System.out.println(fruits);
+	}
+}
+
+// Question - 5 Create an ArrayList of integers [1, 2, 2, 3, 4, 4, 5].
+//   Convert it into a HashSet to remove duplicates.
+//   Display the HashSet.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashSet <Integer> number = new HashSet<>();
+		number.add(1);
+		number.add(2);
+		number.add(2);
+		number.add(3);
+		number.add(4);
+		number.add(4);
+		number.add(5);
+		System.out.println(number);
+	}
+}
+
+// TreeSet(Q5)
+//This is also very important for exams because:
+
+//✅ Removes duplicates (like HashSet)
+
+//✅ Maintains ascending order automatically
+
+//✅ Commonly used for sorted unique collections
+// Question - 1 Create a TreeSet of integers. Add 30, 10, 50, 20, 10, 40.
+//  Display the TreeSet and explain how duplicates are removed and elements are sorted.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		TreeSet<Integer> number = new TreeSet<>();
+		number.add(30);
+		number.add(10);
+		number.add(50);
+		number.add(20);
+		number.add(10);
+		number.add(40);
+		System.out.println(number);
+	}
+}
+
+// Question - 2 Create a TreeSet of strings with ["Banana", "Apple", "Mango", "Orange", "Apple"].
+//    Display the TreeSet in sorted (alphabetical) order.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		TreeSet<String> fruit = new TreeSet<>();
+		fruit.add("Banana");
+		fruit.add("Apple");
+		fruit.add("Mango");
+		fruit.add("Orange");
+		fruit.add("Apple");
+		System.out.println(fruit);
+	}
+}
+
+// Question - 3 Create a TreeSet of integers [5, 15, 25, 35, 45].
+//   Remove the number 25.
+//   Check if 35 is present.
+//   Display the updated TreeSet.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		TreeSet<Integer> number = new TreeSet<>();
+		number.add(5);
+		number.add(15);
+		number.add(25);
+		number.add(35);
+		number.add(45);
+		
+		number.remove(25);
+		System.out.println("Contains 35 ? : "+number.contains(35));
+		System.out.println(number);
+	}
+}
+
+// Question - 4 Create a TreeSet of fruits. Add "Mango", "Banana", "Apple", "Orange".
+//   Show that the output is always sorted alphabetically.
+//Try adding "Banana" again and display the result.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		TreeSet<String> fruit = new TreeSet<>();
+		fruit.add("Mango");
+		fruit.add("Banana");
+		fruit.add("Apple");
+		fruit.add("Orange");
+		fruit.add("Banana");
+		System.out.println("Fruit : "+fruit);
+	}
+}
+
+// Question - 5 Create an ArrayList of integers [4, 2, 5, 1, 2, 4, 3, 5].
+//   Convert it into a TreeSet.
+//   Display how duplicates are removed and numbers are sorted.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		ArrayList<Integer> number = new ArrayList<>();
+		number.add(4);
+		number.add(2);
+		number.add(5);
+		number.add(1);
+		number.add(2);
+		number.add(4);
+		number.add(3);
+		number.add(5);
+		System.out.println("ArrayList : "+number);
+		TreeSet<Integer> numbers = new TreeSet<>(number);
+		System.out.println("TreeSet(sorted & no duplicates) : "+numbers);
+	}
+}
+
+// HashMap(Q6,Q7,Q13,Q15)
+// In your exam, you’ll mostly see:
+
+// Key–Value pairs (like student marks)
+
+// Frequency counter (letters/words)
+
+// Iterating over a HashMap
+
+// Updating values
+
+// Nested HashMaps (student → subject → marks)
+// Question-1 Create a HashMap where keys are student names and values are their marks.
+
+// Add "Rahim"=85, "Karim"=90, "Sumi"=78, "Tania"=92.
+
+// Display all key-value pairs.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashMap<String, Integer> s = new HashMap<>();
+		s.put("Rahim",85);
+		s.put("Karim",85);
+		s.put("Sumi",85);
+		s.put("Tania",85);
+		System.out.println(s);
+	}
+}
+
+// Question-2 Using a HashMap of student marks:
+//  Add "Rafi"=88, "Tina"=76, "Sajid"=95.
+//  Update "Tina"’s marks to 80.
+//  Remove "Rafi".
+//  Display the final map.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashMap<String , Integer> s = new HashMap<>();
+		s.put("Rafi",88);
+		s.put("Tina" ,76);
+		s.put("Sajid", 95);
+		
+		s.put("Tina",80);
+		s.remove("Rafi",88);
+		System.out.println("Final Map : "+s);
+	}
+}
+
+// Question-3 Write a program that counts the frequency of each character in the string "hello world".
+
+//   Store results in a HashMap (character → frequency).
+
+//   Display the map
+
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		String str = "hello world";
+		HashMap<Character, Integer> map = new HashMap<>();
+		for(int i = 0 ; i<str.length();i++){
+			char c = str.charAt(i);// take one character
+			
+			if(map.containsKey(c)){
+				// already counted -> increase by 1 
+				int count = map.get(c);
+				map.put(c,count+1);
+			}else{
+				map.put(c,1);
+			}
+		}
+		System.out.println(map);
+	}
+}
+
+// Question- 4 Write a program that counts how many times each word appears in the sentence:
+//    "Java is fun and Java is powerful".
+//     Store results in a HashMap (word → frequency).
+//     Display the map.
+
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		String sentence = "Java is fun and Java is powerful";
+		String[] words = sentence.split(" ");
+		HashMap<String , Integer> map = new HashMap<>();
+		for(int i = 0 ; i<words.length;i++){
+			String w = words[i];
+			if(map.containsKey(w)){
+				int count = map.get(w);
+				map.put(w,count+1);
+			}else{
+				map.put(w,1);
+			}
+		}
+		System.out.println(map);
+	}
+}
+*/
+// Question - 5 Create a HashMap where keys are student names and values are another HashMap of subject marks. Example:
+//"Rahim" → {Math=85, Physics=90}
+//"Sumi" → {Math=78, Physics=88}
+//Display all students with their subjects and marks.
+import java.util.*;
+public class jcf{
+	public static void main(String[]args){
+		HashMap<String, HashMap<String, Integer>> students = new HashMap<>();
+		HashMap<String , Integer> rahim = new HashMap<>();
+		rahim.put("Math",80);
+		rahim.put("Physics", 90);
+		students.put("Rahim",rahim);
+
+		HashMap<String , Integer> sumi = new HashMap<>();
+		sumi.put("Math",70);
+		sumi.put("Physics", 85);
+		students.put("Sumi", sumi);
+		System.out.println(students);
+	}
+}
+
